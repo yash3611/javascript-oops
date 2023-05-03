@@ -1,0 +1,94 @@
+<table border="1">
+    <tr>
+        <td>Name :</td>
+        <td>E-mail :</td>
+        <td>Phone :</td>
+    </tr>
+
+    <tbody id="record">
+
+    </tbody>
+
+</table>
+
+<!-- <script type="text/javascript">
+
+    let data = [
+        {
+            name: "jay",
+            email: "jay@gmail.com",
+            phone: "12345",
+        },
+        {
+            name: "ajay",
+            email: "ajay@gmail.com",
+            phone: "12345",
+        },
+        {
+            name: "vijay",
+            email: "vijay@gmail.com",
+            phone: "12345",
+        },
+        {
+            name: "ashish",
+            email: "ashish@gmail.com",
+            phone: "12345",
+        },
+    ];
+
+    const alldata = () => {
+        let tbl = "";
+        data.map((val) => {
+            tbl +=
+                `
+            <tr>
+                <td>${val.name}</td>
+                <td>${val.email}</td>
+                <td>${val.phone}</td>
+            </tr>
+            `
+        });
+        document.getElementById('record').innerHTML = tbl;
+    }
+
+    alldata();
+
+
+
+</script> -->
+
+<script type="text/javascript">
+
+    let tbl = "";
+
+    class data {
+        constructor(Name, Email, Phone) {
+            this.Name = Name;
+            this.Email = Email;
+            this.Phone = Phone;
+        }
+
+        allrecord() {
+            tbl += `
+                        <tr>
+                            <td>${this.Name}</td>
+                            <td>${this.Email}</td>
+                            <td>${this.Phone}</td>
+                        </tr>
+                    `
+
+            document.getElementById('record').innerHTML = tbl;
+        }
+
+    }
+    let ans = new data("Jay", "Jay@gmail.com", 12345);
+    let ans1 = new data("Ajay", "Ajay@gmail.com", 12345);
+    let ans2= new data("Vijay", "Vijay@gmail.com", 12345);
+    let ans3 = new data("Ashish", "Ashish@gmail.com", 12345);
+
+    ans.allrecord();
+    ans1.allrecord();
+    ans2.allrecord();
+    ans3.allrecord();
+
+</script>
